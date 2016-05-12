@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<style>
+			html, body {
+				overflow-x: hidden;
+				margin: 0;
+			}
+
+			.crumbs {
+				position: relative;
+				overflow: hidden;
+			}
+			.crumbs:after {
+				position: absolute;
+				width: 15%;
+				height: 100%;
+				right: 0;
+				top: 0;
+				content: '';
+				background-size: 100%;
+				background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #f7f7f7), color-stop(30%, #f7f7f7), color-stop(100%, rgba(247, 247, 247, 0)));
+				background-image: -moz-linear-gradient(right, #f7f7f7, #f7f7f7 30%, rgba(247, 247, 247, 0));
+				background-image: -webkit-linear-gradient(right, #f7f7f7, #f7f7f7 30%, rgba(247, 247, 247, 0));
+				background-image: linear-gradient(to left, #f7f7f7, #f7f7f7 30%, rgba(247, 247, 247, 0));
+			}
+
+			.crumbs-list {
+				position: relative;
+				padding: 1em;
+				width: 100%;
+				white-space: nowrap;
+				overflow-x: auto;
+				/* has to be scroll, not auto */
+				-webkit-overflow-scrolling: touch;
+			}
+			.crumbs-list::-webkit-scrollbar{
+				display: none;
+			}
+			.crumbs-list li {
+				display: inline-block;
+			}
+			.crumbs-list li:after {
+				content: '→';
+				padding: 0 0.25em 0 0.5em;
+				color: #999;
+			}
+			.crumbs-list li.last:before, .crumbs-list li.last:after {
+				content: '';
+			}
+		</style>
+
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<!--Pattern HTML-->
+			<section id="pattern" class="pattern">
+			<div class="crumbs">
+				<ul class="crumbs-list">
+				<li><a href="#">Grandparent</a></li>
+				<li><a href="#">Parent</a></li>
+				<li><a href="#">Child</a></li>
+				<li><a href="#">Grandchild</a></li>
+				<li class="last"><a href="#">Great-Grandchild</a></li>
+				</ul>
+			</div>
+				
+			</section>
+			<!--End Pattern HTML-->
+			
+			<div class="container"> 
+				<!--Pattern Description-->
+				<section class="pattern-description">
+					<h1>Reversed Horizontal Overflow Breadcrumbs</h1>
+					<p>A breadcrumb trail wrapped into one line and where the.</p>
+					<h2>Pros</h2>
+					<ul>
+						<li>Simple to implement. Flows as is.</li>
+						<li>Provides access to full breadcrumb trail.</li>
+					</ul>
+					<h2>Cons</h2>
+					<ul>
+						<li>Can cause scrollbars.</li>
+					</ul>
+				</section>
+				<!--End Pattern Description-->
+				
+				<!--Footer-->
+				<footer role="contentinfo">   
+					<div>
+						<nav id="menu">
+							<a href="http://bradfrost.github.com/this-is-responsive/patterns.html">&larr;More Responsive Patterns</a>
+						</nav>
+					</div>
+				</footer>
+				<!--End Footer-->
+			</div>
+
+		<script src="build/index1.js"></script>
+	</body>
+</html>
